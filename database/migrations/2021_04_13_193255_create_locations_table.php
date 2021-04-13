@@ -18,12 +18,12 @@ class CreateLocationsTable extends Migration
             $table->string('country');
             $table->string('state');
             $table->string('city');
-            $table->string('zip_code');
-            $table->string('district');
-            $table->string('address');
-            $table->string('number');
-            $table->string('latitude');
-            $table->string('longitude');
+            $table->string('zip_code')->nullable();
+            $table->string('district')->nullable();
+            $table->text('address')->nullable();
+            $table->string('number')->nullable();
+            $table->string('latitude')->nullable();
+            $table->string('longitude')->nullable();
             $table->timestamps();
         });
     }
