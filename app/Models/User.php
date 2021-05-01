@@ -50,4 +50,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Contact::class);
     }
+
+    public function businessManagementRole()
+    {
+        return $this->hasMany(BusinessManagementRole::class);
+    }
 }
