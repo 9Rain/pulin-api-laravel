@@ -9,8 +9,8 @@ class Contact extends Model
 {
     use HasFactory;
 
-    public function user()
+    public function owner()
     {
-        return $this->belongsTo(User::class);
+        return $this->morphTo();
     }
 }

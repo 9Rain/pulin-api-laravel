@@ -46,9 +46,9 @@ class User extends Authenticatable
         return $this->hasOne(Location::class);
     }
 
-    public function contact()
+    public function contacts()
     {
-        return $this->hasMany(Contact::class);
+        return $this->morphMany(Contact::class, 'owner');
     }
 
     public function businessManagementRole()
