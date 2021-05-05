@@ -28,7 +28,7 @@ class AddLocationsRelationships extends Migration
     public function down()
     {
         Schema::table('locations', function (Blueprint $table) {
-            $table->dropForeign('locations_user_id_foreign');
+            $table->dropForeign(['users']);
         });
     }
 }

@@ -28,7 +28,7 @@ class AddBusinessManagementRolesRelationships extends Migration
     public function down()
     {
         Schema::table('business_management_roles', function (Blueprint $table) {
-            $table->dropForeign('business_management_roles_user_id_foreign');
+            $table->dropForeign(['users']);
         });
     }
 }
