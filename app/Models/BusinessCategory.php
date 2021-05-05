@@ -13,4 +13,9 @@ class BusinessCategory extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function subcategories()
+    {
+        return $this->hasMany(BusinessSubcategory::class);
+    }
 }
