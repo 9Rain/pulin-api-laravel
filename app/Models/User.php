@@ -43,7 +43,7 @@ class User extends Authenticatable
 
     public function location()
     {
-        return $this->hasOne(Location::class);
+        return $this->morphOne(Location::class, 'owner');
     }
 
     public function contacts()
