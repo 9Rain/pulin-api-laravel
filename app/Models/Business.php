@@ -9,6 +9,11 @@ class Business extends Model
 {
     use HasFactory;
 
+    public function location()
+    {
+        return $this->morphOne(Location::class, 'owner');
+    }
+
     public function contacts()
     {
         return $this->morphMany(Contact::class, 'owner');
