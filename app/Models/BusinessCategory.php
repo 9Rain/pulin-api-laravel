@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class BusinessCategory extends Model
 {
     use HasFactory;
+
+    public function business()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

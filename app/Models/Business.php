@@ -18,4 +18,9 @@ class Business extends Model
     {
         return $this->morphMany(Contact::class, 'owner');
     }
+
+    public function category()
+    {
+        return $this->hasOne(BusinessCategory::class);
+    }
 }
