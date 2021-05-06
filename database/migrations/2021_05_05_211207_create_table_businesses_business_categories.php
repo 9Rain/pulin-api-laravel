@@ -14,8 +14,12 @@ class CreateTableBusinessesBusinessCategories extends Migration
     public function up()
     {
         Schema::create('businesses_business_categories', function (Blueprint $table) {
-            $table->foreignId('user_id')->constrained('users');
-            $table->foreignId('business_id')->constrained('businesses');
+            $table->foreignId('business_id')
+            ->constrained('businesses')
+            ->index('bbc_business_id_foreign');
+            $table->foreignId('business_category_id')
+            ->constrained('business_categories')
+            ->index('bbc_business_category_id_foreign');
         });
     }
 
