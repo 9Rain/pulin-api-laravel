@@ -9,9 +9,9 @@ class BusinessCategory extends Model
 {
     use HasFactory;
 
-    public function business()
+    public function businesses()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsToMany(Business::class);
     }
 
     public function subcategories()
