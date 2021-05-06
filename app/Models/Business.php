@@ -48,4 +48,9 @@ class Business extends Model
     {
         return $this->hasMany(BusinessAlbum::class);
     }
+
+    public function images()
+    {
+        return $this->hasManyThrough(BusinessImage::class, BusinessAlbum::class);
+    }
 }
