@@ -33,4 +33,9 @@ class Business extends Model
     {
         return $this->hasMany(SocialMedia::class);
     }
+
+    public function staff() 
+    {
+        return $this->hasMany(BusinessPerson::class);
+    }
 }
