@@ -38,4 +38,9 @@ class Business extends Model
     {
         return $this->hasMany(BusinessPerson::class);
     }
+
+    public function schedule() 
+    {
+        return $this->hasMany(BusinessSchedule::class);
+    }
 }
