@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddBusinessCategoriesRelationshios extends Migration
+class AddBusinessCategoriesRelationships extends Migration
 {
     /**
      * Run the migrations.
@@ -29,6 +29,7 @@ class AddBusinessCategoriesRelationshios extends Migration
     {
         Schema::table('business_categories', function (Blueprint $table) {
             $table->dropForeign(['businesses']);
+            $table->dropColumn('businesses');
         });
     }
 }
