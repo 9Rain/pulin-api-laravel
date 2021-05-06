@@ -53,4 +53,9 @@ class Business extends Model
     {
         return $this->hasManyThrough(BusinessImage::class, BusinessAlbum::class);
     }
+
+    public function managers()
+    {
+        return $this->belongsToMany(User::class);
+    }
 }
