@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class BusinessAlbum extends Model
 {
     use HasFactory;
+
+    public function business()
+    {
+        return $this->belongsTo(Business::class);
+    }
+
+    public function images()
+    {
+        return $this->hasMany(BusinessImage::class);
+    }
 }
