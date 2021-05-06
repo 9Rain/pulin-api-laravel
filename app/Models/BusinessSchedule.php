@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class BusinessSchedule extends Model
 {
     use HasFactory;
+
+    public function business()
+    {
+        return $this->belongsTo(Business::class);
+    }
 }
