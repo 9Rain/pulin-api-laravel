@@ -43,4 +43,9 @@ class Business extends Model
     {
         return $this->hasMany(BusinessSchedule::class);
     }
+
+    public function gallery() 
+    {
+        return $this->hasMany(BusinessAlbum::class);
+    }
 }
