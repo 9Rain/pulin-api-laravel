@@ -27,6 +27,7 @@ class AddBusinessSubcategoriesRelationships extends Migration
     {
         Schema::table('business_subcategories', function (Blueprint $table) {
             $table->dropForeign(['business_categories']);
+            $table->dropColumn('businesses_categories');
         });
     }
 }
