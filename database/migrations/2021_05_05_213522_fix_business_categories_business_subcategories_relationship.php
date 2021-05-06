@@ -14,8 +14,7 @@ class FixBusinessCategoriesBusinessSubcategoriesRelationship extends Migration
     public function up()
     {
         Schema::table('business_subcategories', function (Blueprint $table) {
-            $table->dropForeign(['business_categories']);
-            $table->dropColumn('businesses_categories');
+            $table->dropConstrainedForeignId('business_categories');
             $table->foreignId('business_categories_id')->constrained('business_categories');
         });
     }
@@ -30,7 +29,7 @@ class FixBusinessCategoriesBusinessSubcategoriesRelationship extends Migration
         Schema::table('business_subcategories', function (Blueprint $table) {
             $table->dropForeign(['business_categories_id']);
             $table->dropColumn('business_categories_id');
-            $table->foreignId('business_categories');
+            $table->foreignId('business_categories')->constrained('business_categories');
         });
     }
 }

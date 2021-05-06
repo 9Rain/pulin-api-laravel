@@ -14,7 +14,7 @@ class AddBusinessSubcategoriesRelationships extends Migration
     public function up()
     {
         Schema::table('business_subcategories', function (Blueprint $table) {
-            $table->foreignId('business_categories');
+            $table->foreignId('business_categories')->constrained('business_categories');
         });
     }
 
@@ -27,7 +27,7 @@ class AddBusinessSubcategoriesRelationships extends Migration
     {
         Schema::table('business_subcategories', function (Blueprint $table) {
             $table->dropForeign(['business_categories']);
-            $table->dropColumn('businesses_categories');
+            $table->dropColumn('business_categories');
         });
     }
 }

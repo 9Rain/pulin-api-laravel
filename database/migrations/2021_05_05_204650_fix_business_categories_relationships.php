@@ -27,7 +27,7 @@ class FixBusinessCategoriesRelationships extends Migration
     public function down()
     {
         Schema::table('business_categories', function (Blueprint $table) {
-            $table->foreignId('businesses');
+            $table->foreignId('businesses')->constrained('businesses');
         });
     }
 }
