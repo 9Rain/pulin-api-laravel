@@ -29,6 +29,7 @@ class AddContactsRelationships extends Migration
     {
         Schema::table('contacts', function (Blueprint $table) {
             $table->dropForeign(['users']);
+            $table->dropColumn('users');
         });
     }
 }
