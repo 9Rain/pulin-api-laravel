@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class BusinessImage extends Model
 {
     use HasFactory;
+
+    public function album()
+    {
+        return $this->belongsTo(BusinessAlbum::class);
+    }
 }
