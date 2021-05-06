@@ -28,4 +28,9 @@ class Business extends Model
     {
         return $this->belongsToMany(BusinessSubCategory::class);
     }
+
+    public function socialMedias() 
+    {
+        return $this->hasMany(SocialMedia::class);
+    }
 }
