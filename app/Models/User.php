@@ -51,13 +51,8 @@ class User extends Authenticatable
         return $this->morphMany(Contact::class, 'owner');
     }
 
-    public function businessManagementRole()
+    public function managedBusinesses()
     {
         return $this->hasMany(BusinessManagementRole::class);
-    }
-
-    public function businesses()
-    {
-        return $this->belongsToMany(Business::class);
     }
 }
