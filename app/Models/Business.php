@@ -56,6 +56,6 @@ class Business extends Model
 
     public function managers()
     {
-        return $this->belongsToMany(User::class);
+        return $this->hasMany(BusinessManagementRole::class);
     }
 }
