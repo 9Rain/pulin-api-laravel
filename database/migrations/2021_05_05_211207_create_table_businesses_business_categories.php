@@ -20,6 +20,7 @@ class CreateTableBusinessesBusinessCategories extends Migration
             $table->foreignId('business_category_id')
             ->constrained('business_categories')
             ->index('bbc_business_category_id_foreign');
+            $table->timestamps();
         });
     }
 
