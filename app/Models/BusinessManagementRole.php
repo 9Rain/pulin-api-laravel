@@ -18,4 +18,9 @@ class BusinessManagementRole extends Model
     {
         return $this->belongsTo(Business::class);
     }
+
+    public function permissions()
+    {
+        return $this->belongsToMany(BusinessManagementPermission::class);
+    }
 }
