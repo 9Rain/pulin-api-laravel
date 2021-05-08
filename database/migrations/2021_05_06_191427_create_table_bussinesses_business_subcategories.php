@@ -20,6 +20,7 @@ class CreateTableBussinessesBusinessSubcategories extends Migration
             $table->foreignId('business_subcategory_id')
             ->constrained('business_subcategories')
             ->index('bbs_business_subcategory_id_foreign');
+            $table->timestamps();
         });
     }
 

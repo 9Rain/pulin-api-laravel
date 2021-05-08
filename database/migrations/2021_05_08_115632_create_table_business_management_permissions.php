@@ -15,7 +15,7 @@ class CreateTableBusinessManagementPermissions extends Migration
     {
         Schema::create('business_management_permissions', function (Blueprint $table) {
             $table->id();
-            $table->string('stringId');
+            $table->string('stringId')->unique();
             $table->text('description')->nullable();
             $table->integer('hierarchy');
             $table->timestamps();
